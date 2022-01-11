@@ -1,0 +1,63 @@
+ <table>
+        <caption>Top Selling Products</caption>
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>OS</th>
+            <th>Screen size</th>
+            <th>Image</th>
+            <th>Add data</th>
+        </tr>
+        <tr>
+            <th>Iphone</th>
+            <th>Iphone 13</th>
+            <th>IOS</th>
+            <th>6.1-inch</th>
+            <th>
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.apple.com%2Fnl%2Fshop%2Fbuy-iphone%2Fiphone-13%2F6%2C1%25E2%2580%2591inch-display-128gb-roze&psig=AOvVaw1IBB7Y_rAYDnkzF_t1P2zE&ust=1641997449372000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjw86jzqfUCFQAAAAAdAAAAABAS" alt="Iphone 13" >
+            </th>
+            <th>
+                <form action="http://example.com/try" method="POST" enctype="multipart/form-data">
+                    <label for="Brand"> Brand: </label>
+                    <input type="text" name="Brand" id="Brand">
+                    <label for="Model"> Model: </label>
+                    <input type="text" name="Model" id="Model">
+                    <label for="OS"> OS: </label>
+                    <input type="text" name="OS" id="OS">
+                    <label for="Screen size"> Screen size: </label>
+                    <input type="text" name="Screen size" id="Screen Size">
+                    <label for="pic">Upload picture:</label>
+                    <input type="file" name="pic" id="pic">
+                    <input type="submit">
+                </form>
+            </th>
+        </tr>
+       
+        <tr>
+            <th>Iphone</th>
+            <th>Iphone 11</th>
+            <th>IOS</th>
+            <th>6.1-inch</th>
+            <th>
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.apple.com%2Fnl%2Fshop%2Fbuy-iphone%2Fiphone-11%2F6%2C1%25E2%2580%2591inch-display-128gb-groen&psig=AOvVaw06NrGnHCSBtxkWlCiVSl5Z&ust=1641997558351000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJivvtvzqfUCFQAAAAAdAAAAABAF" alt="Iphone 11" >
+            </th>
+        </tr>
+        <tr>
+            <th>Samsung</th>
+            <th>Samsung S21</th>
+            <th>Android</th>
+            <th>6.2-inch</th>
+            <th>
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.samsung.com%2Fmy%2Fsmartphones%2Fgalaxy-s%2Fgalaxy-s21-5g-phantompink-256gb-sm-g991bzigxme%2Fbuy%2F&psig=AOvVaw3eLY5qpla5PbKwm4HcqBS2&ust=1641997624426000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOiZlPvzqfUCFQAAAAAdAAAAABAh" alt="Samsung S21" >
+            </th>
+        </tr>
+        <tr>
+            <th>Samsung</th>
+            <th>Samsung Z Flip 3</th>
+            <th>Android</th>
+            <th>6.7-inch</th>
+            <th>
+                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.samsung.com%2Fnl%2Fsmartphones%2Fgalaxy-z%2Fgalaxy-z-flip3-5g-gray-128gb-sm-f711bzabeub%2F&psig=AOvVaw2zvV8P6IKjdi47omJYszTQ&ust=1641997762453000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjPgr30qfUCFQAAAAAdAAAAABAE" alt="Samsung Z Flip 3" >
+            </th>
+        </tr>  
+    </table>
