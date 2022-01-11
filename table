@@ -17,7 +17,7 @@
                 <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.apple.com%2Fnl%2Fshop%2Fbuy-iphone%2Fiphone-13%2F6%2C1%25E2%2580%2591inch-display-128gb-roze&psig=AOvVaw1IBB7Y_rAYDnkzF_t1P2zE&ust=1641997449372000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjw86jzqfUCFQAAAAAdAAAAABAS" alt="Iphone 13" >
             </th>
             <th>
-                <form action="http://example.com/try" method="POST" enctype="multipart/form-data">
+               <form action="https://wt.ops.labs.vu.nl/api22/799f2430" method="post" enctype="multipart/form-data">
                     <label for="Brand"> Brand: </label>
                     <input type="text" name="Brand" id="Brand">
                     <label for="Model"> Model: </label>
