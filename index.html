@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link href="styles.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
 <html lang="en">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
     <!-- Header  -->
     <div class="header">
     <!-- Navigation bar -->
-        <nav> 
+        <nav class="menu"> 
             <a href="#">Home</a>
             <a href="#">Phone</a>
             <a href="#">Contact</a>
@@ -44,8 +44,8 @@
             </ol>
     </section>
     <section>
+        <caption><h2 class="pageH">TOP-SELLING PRODUCTS</h2></caption>
         <table>
-            <caption><h2 class="pageH">TOP-SELLING PRODUCTS</h2></caption>
             <tr>
                 <th>Brand</th>
                 <th>Model</th>
@@ -104,16 +104,16 @@
             <td>
                 <form action="http://example.com/try" method="POST" enctype="multipart/form-data">
                     <label for="Brand"> Brand: </label>
-                    <input type="text" name="Brand" id="Brand">
+                    <input type="text" name="Brand" id="Brand" required>
                     <td> <label for="Model"> Model: </label>
-                        <input type="text" name="Model" id="Model"></td>
+                        <input type="text" name="Model" id="Model" required></td>
                     <td> <label for="OS"> OS: </label>
-                    <input type="text" name="OS" id="OS"> </td>
+                    <input type="text" name="OS" id="OS" required> </td>
                     <td>
                     <label for="Screen size"> Screen size: </label>
-                    <input type="text" name="Screen size" id="Screen Size"> </td>
+                    <input type="text" name="Screen size" id="Screen Size" required> </td>
                 <td> <label for="pic">Upload picture:</label>
-                    <input type="file" name="pic" id="pic">
+                    <input type="file" name="pic" id="pic" required>
                     <input type="submit">  </td>
                 </form>
             </th>
@@ -122,8 +122,8 @@
     </section>
     <section>
         <h2 class="pageH">ORDER INSTRUCTIONS</h2>
-        <p>To order from our webshop:</p>
-        <ul>
+        <p id="titleO">To order from our webshop:</p>
+        <ul class="order">
             <li>Select the item of your choice.</li>
             <li>Provide your personal information such as name, email, and address.</li>
             <dl>
@@ -136,12 +136,22 @@
     </section>
     </div>
 <!-- </div> -->
-    
-<footer>
-    <figure>
-        <img src="https://ibb.co/TvP1ztq">
+<!-- Footer  -->
+<footer class="footer-types">
+
+    <div class="footer-left">
+ <figure>
+    <img src="FYLogo.png">
+ </figure>
         <figcaption>This website is powered by Vrije Universiteit Amsterdam</figcaption>
-    </figure>
+    </div>
+
+    <div class="footer-right">
+        <p class="footer-desc">
+            <span>About Us</span>
+            We offer the newest and trendiest phone models at the moment.</p>
+
+    </div>
 </footer>
 </body>
 
