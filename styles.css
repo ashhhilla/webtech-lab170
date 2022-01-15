@@ -1,20 +1,30 @@
 body {
     font-family: Verdana, sans-serif;
     max-width: 2000px;
+    text-indent: 0%;
+
 }
 
-/* .page-content{
-    max-width: 2000px;
-} */
+@media print {
+    h2 {page-break-before: always;}
+}
 
-.header-image {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.11), rgba(0, 0, 0, 0.644)), url("background.jpg");
+@media print {
+footer {page-break-after: always;}
+} 
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0.836)), url("background.jpg");
     width: 100%;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .header-text{
@@ -29,6 +39,27 @@ body {
     padding-top: 15%;
 }
 
+.container {
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7.5%;
+    font: 12px Verdana, sans-serif;
+}
+  
+
+h2.pageH {
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 7px;
+}
+
+section {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 
 .incl_in_img{
@@ -78,10 +109,19 @@ nav a{
     padding: 13px;
     text-decoration: none;
     font-size: 13px;
+    font-variant: small-caps;
     text-transform: uppercase;
     color: white;
 }
 
 nav a:hover{
     font-size: 18px;
+}
+
+nav a:active{
+    color:rgb(61, 54, 122)
+}
+
+nav a:visited{
+    color:rgb(255, 255, 255);
 }
