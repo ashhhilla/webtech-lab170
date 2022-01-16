@@ -128,10 +128,9 @@ td {
 	padding: 10px 10px;
 }
 
-caption, .captionT {
+caption {
 	font-size: 12px;
 	text-align: center;
-	padding-left: 130px;
 }
 
 /* Navigationbar */
@@ -248,7 +247,7 @@ input:focus {
 		width: 30%;
 	}
 
-	.titleO, .order{
+	#titleO, .order{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
