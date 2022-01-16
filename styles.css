@@ -112,7 +112,7 @@ table, th, td {
 	border-width: 1px;
 	border-style: solid;
 	border-color: black;
-	border-spacing: none;
+	border-spacing: 0;
 	text-align: center;
 	background: white;
 	font-size: 10px;
