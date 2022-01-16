@@ -128,9 +128,30 @@ td {
 	padding: 10px 10px;
 }
 
-caption {
-	font-size: 12px;
+
+ caption {
+	font-size: 18px;
 	text-align: center;
+	font-family: Verdana;
+	font-weight: 100;
+	letter-spacing: 7px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	
+}
+
+#Contact, #CS, .titleO {
+	padding-left: 30px;
+}
+
+.PhoneT {
+	width: 91%;
+	margin-top: 80px;
+}
+
+.PhoneT tr td {
+	padding:20px;
+	font-size: 10px;
 }
 
 /* Navigationbar */
@@ -271,5 +292,17 @@ input:focus {
 	.menu {
 		padding-right: 40px;
 	}
+	.captionT {
+		margin-left: 120px;
+	}
+
+	.captionP {
+		margin-left: 80px;
+	}
+
+	.tableT {
+		margin-top: 40px;
+	}
+
 
 }
