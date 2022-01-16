@@ -5,14 +5,17 @@ body {
 
 }
 
+/* Print screen */
 @media print {
     h2 {page-break-before: always;}
+    footer {page-break-after: always;}
+    p {
+        orphans:inherit;
+        widows:unset;
+      }
 }
 
-@media print {
-footer {page-break-after: always;}
-} 
-
+/* Header */
 .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0.836)), url("background.jpg");
     width: 100%;
@@ -39,12 +42,13 @@ footer {page-break-after: always;}
     padding-top: 15%;
 }
 
+/* Page content */
 .container {
     width: 100%;
     height: auto;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 7.5%;
+    margin-top: 15%;
     font: 12px Verdana, sans-serif;
 }
   
@@ -73,6 +77,7 @@ section {
     font-size: 12px;
 }
 
+/* Responsivity */
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -128,6 +133,7 @@ caption {
 	text-align: center;
 }
 
+/* Navigationbar */
 nav {
     text-align: right;
     padding-top: 15px;
@@ -142,6 +148,29 @@ nav a{
     color: white;
 }
 
+nav a:hover{
+    font-size: 18px;
+}
+
+nav a:active{
+    color:rgb(75, 69, 156);
+}
+
+/* Links within paragraphs */
+p a:link {
+    text-decoration: none;
+    color: rgb(36, 35, 35);
+}
+
+p a:hover{
+    color: white;
+}
+
+p a:visited{
+    color: rgb(75, 69, 156);
+}
+
+/* Form */
 .order {
 	list-style-type: decimal;
 }
@@ -150,13 +179,12 @@ input:focus {
 	background-color: rgba(231, 231, 230, 0.918);
 }
 
-nav a:hover{
-    font-size: 18px;
-}
 
 #titleO, .order{
 	margin-left: 50px;
 }
+
+/* Footer */
 .footer-types{
 	background-color: #979797;
 	box-sizing: border-box;
