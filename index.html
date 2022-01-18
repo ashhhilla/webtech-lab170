@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<link href="styles.css" rel="stylesheet">
 <html lang="en">
+<head>
+<link href="style.css" rel="stylesheet">
+<script src="javascript.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
 <title>F&Y Phones</title>
 </head>
-<body>
+<body>   
 <!-- <div class="page-content"> -->
     <!-- Header  -->
-    <div class="header-image">
-        <!-- Navigation bar -->
-        <nav> 
-            <a href="">Home</a>
-            <a href="">Phone</a>
-            <a href="">Contact</a>
-            <a href="">Return Policy</a>
-            <a href="">Shopping Basket</a>
-        </nav>
+    <div class="header">
+    <!-- Navigation bar -->
+        <nav class="menu"> 
+            <a href="#">Home</a>
+            <a href="#">Phone</a>
+            <a href="#">Contact</a>
+            <a href="#">Return Policy</a>
+            <a href="#">Shopping Basket</a>
+        </nav> 
         <div class="header-text">
-        <h1 id="topH">H O M E</h1>
+        <h1 id="topH" class="topH">H O M E</h1>
         <div class="incl_in_img">
-            <h2><pre>A B O U T</pre></h2>
-            <p> Hi! Welcome to <em>F&Y Phones</em>. <br>
-                We are two second-years AI students who recently launched our web shop. 
+            <h2> A B O U T</h2>
+             <pre>Hi! Welcome to <em>F&Y Phones</em>. </pre><br>
+             <p> We are two second-years AI students who recently launched our web shop. 
                 We offer the newest and trendiest phone models at the moment. 
                 For any questions do not hesitate to reach out to us through the contact page. 
             </p>
@@ -31,19 +32,21 @@
         </div>
     </div>
 
+    <!-- Page content -->
+    <div class="container">
     <section>
-        <h2><pre> O U R F E A T U R E S</pre></h2>
-        <ol>
-            <li>We guarantee the best quality</li>
-            <li>Accepts multiple debit and credit card payments</li>
-            <li>Customer services are always ready to help you</li>
-            <li>12 months warranty</li>
-            <li>Free home delivery</li>
-        </ol>
+        <h2 class="pageH">OUR FEATURES</h2>
+            <ol>
+                <li>We guarantee the best quality</li>
+                <li>Accepts multiple debit and credit card payments</li>
+                <li>Customer services are always ready to help you</li>
+                <li>12 months warranty</li>
+                <li>Free home delivery</li>
+            </ol>
     </section>
     <section>
-        <table>
-            <caption><h2><pre>T O P  S E L L I N G  P R O D U C T S</pre></h2></caption>
+        <table class="tableT"> 
+            <caption class="captionT">TOP-SELLING PRODUCTS</caption>
             <tr>
                 <th>Brand</th>
                 <th>Model</th>
@@ -57,7 +60,7 @@
                 <td>IOS</td>
                 <td>6.1-inch</td>
                 <td>
-                    <img src="iphone13.png" alt="Iphone 13" width="100" height="100" >
+                    <a href="https://ibb.co/0tF40mY"><img src="https://i.ibb.co/m8XZnbh/iphone13.png" alt="iphone13"  width="100" height="100"></a>
                 </td>
             </tr>
            
@@ -67,7 +70,7 @@
                 <td>IOS</td>
                 <td>6.1-inch</td>
                 <td>
-                    <img src="iphone11.png" alt="Iphone 11" width="100" height="100" >
+                    <a href="https://ibb.co/094RBBH"><img src="https://i.ibb.co/5jpgYYb/iphone11.png" alt="iphone11" width="100" height="100"></a>
                 </td>
             </tr>
             <tr>
@@ -76,7 +79,7 @@
                 <td>Android</td>
                 <td>6.2-inch</td>
                 <td>
-                    <img src="Galaxys21.png" alt="Samsung S21" width="100" height="100" >
+                    <a href="https://ibb.co/3MWFs9h"><img src="https://i.ibb.co/Yy8dWFj/Galaxys21.png" alt="Galaxys21" width="100" height="100"></a>
                 </td>
             </tr>
             <tr>
@@ -85,7 +88,7 @@
                 <td>Android</td>
                 <td>6.7-inch</td>
                 <td>
-                    <img src="galaxyzflip.png" alt="Samsung Z Flip 3" width=100" height="100" >
+                    <a href="https://ibb.co/5cJd97T"><img src="https://i.ibb.co/C0SqtrB/galaxyzflip.png" alt="galaxyzflip" width="100" height="100"></a>
                 </td>
             </tr>  
             <tr>
@@ -94,51 +97,100 @@
                 <td>Android</td>
                 <td>6.4-inch</td>
                 <td>
-                    <img src="Pixel6.png" alt="Google Pixel 6" width="100" height="100" >
+                    <a href="https://ibb.co/N9mJK8p"><img src="https://i.ibb.co/7nRZKwV/Pixel6.png" alt="Pixel6" width="100" height="100"></a>
                 </td>
             </tr> 
             <tr>
 
-            <td>
-                <form action="http://example.com/try" method="POST" enctype="multipart/form-data">
+            <td><form action="http://example.com/try" method="POST" enctype="multipart/form-data"> </form>
+               
                     <label for="Brand"> Brand: </label>
-                    <input type="text" name="Brand" id="Brand">
-                    <td> <label for="Model"> Model: </label>
-                        <input type="text" name="Model" id="Model"></td>
+                    <input type="text" name="Brand" id="Brand" required></td>
+                    <td><label for="Model"> Model: </label>
+                        <input type="text" name="Model" id="Model" required></td>
                     <td> <label for="OS"> OS: </label>
-                    <input type="text" name="OS" id="OS"> </td>
+                    <input type="text" name="OS" id="OS" required> </td>
                     <td>
-                    <label for="Screen size"> Screen size: </label>
-                    <input type="text" name="Screen size" id="Screen Size"> </td>
-                <td> <label for="pic">Upload picture:</label>
-                    <input type="file" name="pic" id="pic">
-                    <input type="submit">  </td>
-                </form>
-            </th>
+                    <label for="ScreenSize"> Screen size: </label>
+                    <input type="text" name="Screensize" id="ScreenSize" required> </td>
+                <td><label for="pic">Upload picture:</label>
+                    <input type="file" name="pic" id="pic" required><input type="submit"></td> 
             </tr> 
         </table>
     </section>
+
     <section>
-        <h2><pre>O R D E R  I N S T R U C T I O N S</pre></h2>
-        <p>To order from our webshop: </p>
-        <ul>
+        <table class="PhoneT">
+            <caption class="captionP">PHONE ACCESSORIES</caption>
+            <tr>
+                <th>Accessories</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td> Apple Iphone 13 Phone Case</td>
+                <td> Є24.00</td>
+           
+            <tr>
+                <td> Pixel 6 Phone Case</td>
+                <td> Є18.00 </td>
+            </tr>
+            <tr>
+                <td> Samsung Galaxy S21 Phone Case</td>
+                <td> Є22.00</td>
+            </tr>
+            <tr>
+                <td> Apple Airpods 3</td>
+                <td> Є224.00</td>
+               
+            </tr>  
+            <tr>
+                <td> JBL Tunes 110 Earphones</td>
+                <td> Є9.99</td>
+                
+            </tr> 
+            
+        </table>
+
+    </section>
+    <section>
+
+        <h2 class="pageH">ORDER INSTRUCTIONS</h2>
+        <p class="titleO">To order from our webshop:</p>
+        <ul class="order">
             <li>Select the item of your choice.</li>
             <li>Provide your personal information such as name, email, and address.</li>
-            <dl>
-                <dd><strong>Remember to always provide a zipcode for the address!</strong></dd>
-            </dl>
+            <li>
+                <strong>Remember to always provide a zipcode for the address!</strong>
+            </li>
             <li>Provide your address if you have not done it before.</li>
             <li>Press <em>finalize order</em> to complete your order.</li>
             <li>Your order will now be processed and you will receive an email shortly after.</li>
         </ul>
-    </section>
+    </section>   
+    <p id="Contact">Contact us</p>
+    <dl>
+    <dt id="CS">Our Customer service is ready for you 24/7</dt>
+    <dd>Our email: FYphone@gmail.com</dd> 
+</dl> 
+</div>
 <!-- </div> -->
-    
-<footer>
-    <figure>
-        <img src="https://ibb.co/TvP1ztq">
-        <figcaption>This website is powered by Vrije Universiteit Amsterdam</figcaption>
-    </figure>
+<!-- Footer  -->
+<footer class="footer-types">
+
+    <div class="footer-left">
+ <figure>
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/jh3mFty/FYLogo.png" alt="FYLogo" ></a>
+    <figcaption>This website is powered by Vrije Universiteit Amsterdam &copy;</figcaption>
+
+ </figure>
+</div>
+
+    <div class="footer-right">
+        <p class="footer-desc">
+            <span>Social Media</span>
+            <a href="http://www.instagram.com">Instagram</a></p>
+
+    </div>
 </footer>
 </body>
 
