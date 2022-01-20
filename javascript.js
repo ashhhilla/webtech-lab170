@@ -21,24 +21,25 @@ function sortTableByColumn(table, column, asc = true) {
 
     // Remember how the column is currently sorted
     table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+    table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc"));
     table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
-    // table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
 }
 
-document.querySelectorAll(".tableT th").forEach(headerCell => {
+document.querySelectorAll(".tableT #sorted").forEach(headerCell => {
     headerCell.addEventListener("click", () => {
         const tableElement = headerCell.parentElement.parentElement.parentElement;
         const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-       const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
         sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
     });
 });
 
-document.querySelectorAll(".PhoneT th").forEach(headerCell => {
+document.querySelectorAll(".phoneT #sorted").forEach(headerCell => {
     headerCell.addEventListener("click", () => {
         const tableElement = headerCell.parentElement.parentElement.parentElement;
         const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-       const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
         sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
     });
 });
