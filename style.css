@@ -84,36 +84,31 @@ only screen and (max-width: 760px),
 
 
 	/* Force table to not be like tables anymore */
-	thead, tbody, th, td, tr, .captionP, .captionT{ 
+	thead, tbody, th, td, tr { 
 		display: block;
 	
 	}
 
 	table {
+		display: block;
 		caption-side: top;
 		font-size: 10px;
+		margin-left: 5px;
 	}
 	
-	thead tr{ 
+	thead tr { 
 		position: absolute;
 	}
 	
-	th,td { 
+	th,td{ 
+		
 		text-align: center;
 	}
-
-	.tableP, .tableT {
-		margin-top: 50px;
-		width: 80%;
-	}
 	
-	.captionT {
-		margin-right: 50px;
-	}
 
 }
 
-table, th, td  {
+table, th, td {
 	border-width: 1px;
 	border-style: solid;
 	border-color: black;
@@ -121,8 +116,7 @@ table, th, td  {
 	text-align: center;
 	background: white;
 	font-size: 10px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 }
 
 th {
@@ -150,16 +144,39 @@ td {
 	padding-left: 30px;
 }
 
-.PhoneT {
+.phoneT {
 	width: 91%;
 	margin-top: 80px;
 }
 
-.PhoneT tr td {
+.phoneT tr td{
 	padding:20px;
 	font-size: 10px;
 }
 
+/* Sort table, source: https://codepen.io/dcode-software/pen/zYGOrzK */
+thead {
+	cursor: pointer;
+  }
+
+thead .th-sort-asc::after {
+	content: "\25b4";
+}
+
+thead .th-sort-desc::after {
+	content: "\25be";
+}
+
+thead .th-sort-asc::after,
+thead .th-sort-desc::after {
+	margin-left: 5px;
+	font-size: 22px;
+}
+
+thead .th-sort-asc,
+thead  .th-sort-desc {
+background: #3959796c;
+}
 /* Navigationbar */
 nav {
     text-align: right;
@@ -209,8 +226,6 @@ input:focus {
 
 #titleO, .order{
 	margin-left: 50px;
-	list-style-image: none;
-	list-style: none;
 }
 
 /* Footer */
@@ -279,7 +294,6 @@ input:focus {
 	#titleO, .order{
 		margin-left: 20px;
 		margin-right: 20px;
-		list-style-position: inside;
 	}
 
 	.incl_in_img{
@@ -301,19 +315,15 @@ input:focus {
 	.menu {
 		padding-right: 40px;
 	}
-
 	.captionT {
-		margin-left: 80px;
-		text-align: center;
+		margin-left: 120px;
 	}
 
 	.captionP {
-		margin: 80px;
-		text-align: center;
-		font-variant: normal;
+		margin-left: 80px;
 	}
 
-	.PhoneT, .tableP {
+	.tableT {
 		margin-top: 40px;
 	}
 
