@@ -1,0 +1,86 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>
+<table id="myTable">
+    <thead>
+    <tr>
+    <th>Brand</th>
+    <th>Model</th>
+    <th>OS</th>
+    <th>Screen Size</th>
+    <th>Image</th>
+    </tr>
+    </thead>
+    <tbody></tbody> 
+    <tr>
+        <td>
+            <form action="https://wt.ops.labs.vu.nl/api22/638972a1" method="post" id="add_details">
+                <label for="Brand">Brand:</label>
+                <input type="text" name="brand" id="Brand" required></td>
+                <td><label for="Model">Model:</label>
+                    <input type="text" name="model" id="Model" required></td>
+                <td><label for="OS">OS:</label>
+                    <input type="text" name="os" id="OS" required></td>
+                <td>
+                    <label for="ScreenSize">Screen Size:</label>
+                    <input type="text" name="screensize" id="ScreenSize" required></td>
+                <td><label for="pic">Upload Picture</label>
+                    <input type="text" name="image" id="pic" required>
+                    <input type="submit" id="add" value="submit">
+                    <input type="reset" id="reset-btn" value="reset">
+            </form>
+        </td>
+    </tr>    
+</table>
+
+<!-- https://www.kodingmadesimple.com/2016/07/display-json-data-in-html-table-using-jquery-ajax.html -->
+<!-- https://www.codegrepper.com/code-examples/javascript/reset+form+after+ajax+submit+jquery -->
+<script>
+
+// Document should be loaded 
+ $(document).ready(function(){
+    $("#reset-btn").click(function(e) {
+    e.preventDefault(); // prevent actual form submit
+    var form = $(this);
+    var url = form.attr('action'); //get submit url [replace url here if desired]
+    $.ajax({
+         type: "GET",
+         url: "https://wt.ops.labs.vu.nl/api22/638972a1/reset",
+         dataType: 'json',
+         data: form.serialize(), // serializes form input
+         success: function(data){
+             $("#myTable").empty();
+         }
+    });
+    });
+
+    //  GET request
+    $.ajax({
+        url: "https://wt.ops.labs.vu.nl/api22/638972a1",
+        method: "GET",
+        dataType: 'json',
+        // The elements will be added to the row when the GET request is succeeded
+        success: function(data) {
+            // THIS PART !!!!!!!!!
+            var img = $('#pic').append('<img src="' + this + '" />');
+            for (var i=0; i<data.length; i++) {
+                var row = $('<tr><td>' +data[i].brand+ '</td><td>' +data[i].model+ '</td><td>' 
+                    +data[i].os+ '</td><td>' +data[i].screensize+ '</td><td>' +data[i].img+ '</td></tr>');
+                $('#myTable').append(row);
+            }
+        },
+        
+        // Displays an error when the GET request is not succeeded
+        error: function(jqXHR, textStatus, errorThrown){
+            alert('Error: ' + textStatus + ' - ' + errorThrown);
+        }
+    }); 
+});
+</script>
+
+
+
+</body>
+</html>
