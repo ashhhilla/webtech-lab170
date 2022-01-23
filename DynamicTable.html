@@ -29,16 +29,33 @@
                 <td><label for="pic">Upload Picture</label>
                     <input type="text" name="image" id="pic" required>
                     <input type="submit" id="add" value="submit">
+                    <input type="reset" id="reset-btn" value="reset">
             </form>
         </td>
     </tr>    
 </table>
 
 <!-- https://www.kodingmadesimple.com/2016/07/display-json-data-in-html-table-using-jquery-ajax.html -->
+<!-- https://www.codegrepper.com/code-examples/javascript/reset+form+after+ajax+submit+jquery -->
 <script>
 
 // Document should be loaded 
  $(document).ready(function(){
+    $("#reset-btn").click(function(e) {
+    e.preventDefault(); // prevent actual form submit
+    var form = $(this);
+    var url = form.attr('action'); //get submit url [replace url here if desired]
+    $.ajax({
+         type: "GET",
+         url: "https://wt.ops.labs.vu.nl/api22/638972a1/reset",
+         dataType: 'json',
+         data: form.serialize(), // serializes form input
+         success: function(data){
+             $("#myTable").empty();
+         }
+    });
+    });
+
     //  GET request
     $.ajax({
         url: "https://wt.ops.labs.vu.nl/api22/638972a1",
@@ -51,6 +68,7 @@
                 $('#myTable').append(row);
             }
         },
+        
         // Displays an error when the GET request is not succeeded
         error: function(jqXHR, textStatus, errorThrown){
             alert('Error: ' + textStatus + ' - ' + errorThrown);
@@ -58,5 +76,8 @@
     }); 
 });
 </script>
+
+
+
 </body>
 </html>
