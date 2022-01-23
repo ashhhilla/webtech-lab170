@@ -1,0 +1,70 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>
+<table id="dynamic">
+    <thead>
+    <tr>
+    <th>Brand</th>
+    <th>Model</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+    <tr>
+        <td>
+            <form action="https://wt.ops.labs.vu.nl/api22/638972a1" method="post" id="add_details">
+                <label for="Brand">Brand:</label>
+                <input type="text" name="brand" id="Brand" required></td>
+                <td><label for="Model">Model:</label>
+                    <input type="text" name="model" id="Model" required></td>
+                <td><label for="OS">OS:</label>
+                    <input type="text" name="os" id="OS" required></td>
+                <td>
+                    <label for="ScreenSize">Screen Size:</label>
+                    <input type="text" name="screensize" id="ScreenSize" required></td>
+                <td><label for="pic">Upload Picture</label>
+                    <input type="text" name="image" id="pic" required>
+                    <input type="submit" id="add" value="submit">
+            </form>
+        </td>
+    </tr>    
+</table>
+
+<!-- SOURCE: https://www.c-sharpcorner.com/blogs/how-to-insert-and-retrieve-data-using-jquery-ajax-in-asp-net -->
+<script>
+    // Used to parse values from form into table
+    let requestData = { brand: $("#Brand").val(), model: $("#Model").val(), 
+    os: $("#OS").val(), screensize: $("#ScreenSize").val(), image: $("#pic").val()};
+
+    // Document should be loaded 
+    $(document).ready(function(){
+
+        // Function implemented when submit button is pressed
+        $('#add_details').on('submit', function(event){
+
+            // The GET request
+            $.ajax({
+                url:"https://wt.ops.labs.vu.nl/api22/638972a1",
+                method: "GET",
+                data: requestData,
+                dataType: "json",
+
+                // When the GET request is succeeded, function(data) starts
+                success: function(data){
+                    var dynamicTable = $('dynamic tbody');
+                    dynamicTable.empty();
+
+                    $(data).each(function(index,requestData) {
+                        dynamicTable.append('<tr><td>' + requestData.brand + '</td><td>'  
+                        + requestData.model + '</td><td>' + requestData.os + '</td><td>'  
+                        + requestData.screensize + '</td><td>' + requestData.image + '</td></tr>');
+                    });
+                }
+            });
+        });
+    });
+</script>
+   
+</body>
+</html>
