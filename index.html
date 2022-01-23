@@ -1,8 +1,13 @@
+
+<!-- source sorting table: https://codepen.io/dcode-software/pen/zYGOrzK  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <link href="style.css" rel="stylesheet">
 <meta charset="UTF-8">
+<script type="text/javascript" src="javascript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>F&Y Phones</title>
 </head>
@@ -44,6 +49,7 @@
     </section>
     <!-- Table 1, Top Selling Products -->
     <section>
+        
         <table class="tableT"> 
             <caption class="captionT">TOP-SELLING PRODUCTS</caption>
             <thead>
@@ -104,9 +110,10 @@
             </tr> 
         </tbody>
             <tr>
-            <td><form action="https://wt.ops.labs.vu.nl/api22/b840bc6c" method="POST"> 
+            <td>
+                <form action="https://wt.ops.labs.vu.nl/api22/b840bc6c" method="post"> 
                     <label for="Brand"> Brand: </label>
-                    <input type="text" name="brand" id="Brand" required></td>
+                    <input type="text" name="brand" id="Brand"  required></td>
                     <td>
                     <label for="Model"> Model: </label>
                     <input type="text" name="model" id="Model" required></td>
@@ -114,17 +121,19 @@
                     <label for="OS"> OS: </label>
                     <input type="text" name="os" id="OS" required> </td>
                     <td>
-                    <label for="ScreenSize"> Screen size: </label>
-                    <input type="text" name="screensize" id="screensize" required> </td>
+                    <label for="Screensize"> Screensize: </label>
+                    <input type="text" name="screensize" id="Screensize" required> </td>
                     <td>
-                    <label for="pic">URL image:</label>
-                    <input type="text" name="pic" id="pic" required> 
-                    <input type="submit" value="submit"> 
+                    <label for="Pic"> Pic:</label>
+                    <input type="url" name="image" id="Pic" required> 
+                    <input type="submit" value="Submit"> 
+                    <input type="reset" value="Reset Data" id="resetbtn"> </tr>
                     </td> 
                 </form>
-                <script type="text/javascript" src="javascript.js"></script>
             </tr> 
         </table>
+        
+   
     </section>
     
 
