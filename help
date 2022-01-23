@@ -76,7 +76,21 @@
             alert('Error: ' + textStatus + ' - ' + errorThrown);
         }
     }); 
+    
+     $("#add_details").click("add", function (e) {
+    $.ajax({
+      type: "POST",
+      url: "https://wt.ops.labs.vu.nl/api22/638972a1",
+      data: "json",
+      success: function () {
+      }
+    });
+
+    e.preventDefault();
 });
+
+});
+
 </script>
 
 
