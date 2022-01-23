@@ -44,7 +44,6 @@
     $("#reset-btn").click(function(e) {
     e.preventDefault(); // prevent actual form submit
     var form = $(this);
-    var url = form.attr('action'); //get submit url [replace url here if desired]
     $.ajax({
          type: "GET",
          url: "https://wt.ops.labs.vu.nl/api22/638972a1/reset",
