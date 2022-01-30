@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "mypackage": "^0.1.0",
+    "server.js": "^1.0.0",
+    "sqlite3": "^4.2.0",
+    "underscore": "^1.13.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "server.js",
+  "version": "1.0.0",
+  "main": "hello.js",
+  "devDependencies": {},
+  "author": "Ashilla Risautami, Yuki Wu",
+  "license": "ISC",
+  "description": "Web Server for Assignment 3 for Lab 170",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashhhilla/webtech-lab170.git"
+  },
+  "keywords": [
+    "Web",
+    "Server"
+  ],
+  "bugs": {
+    "url": "https://github.com/ashhhilla/webtech-lab170/issues"
+  },
+  "homepage": "https://github.com/ashhhilla/webtech-lab170#readme"
+}
